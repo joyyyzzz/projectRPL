@@ -35,7 +35,7 @@
             <!--END CONTENT-->
         </div>
         <!--Footer-->
-        <div class="fixed-bottom text-center bg-dark text-light mb-2">
+        <div class="fixed-bottom text-center mb-2">
             Created by Kelompok 7 RPL
         </div>
         <!--END FOOTER-->
