@@ -20,7 +20,7 @@
 
     <style>
         body {
-            background-image: url('https://st3.depositphotos.com/2673929/12771/i/450/depositphotos_127711786-stock-photo-bar-interior-with-poster-and.jpg');
+            background-image: url('https://media.istockphoto.com/id/1191879835/photo/empty-tabletop-in-the-coffe-shop.jpg?s=612x612&w=0&k=20&c=0ng1OHRLWiD0cVHdYZbmARj0fyR0HQ35BOFF7Ry8Qqs=');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -133,7 +133,7 @@
 
     <main class="form-signin w-100 text-center m-auto">
         <form>
-            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+            <h1 class="h3 mb-3 text-light fw-normal">Please sign in</h1>
 
             <div class="form-floating">
                 <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
@@ -144,7 +144,7 @@
                 <label for="floatingPassword">Password</label>
             </div>
 
-            <div class="form-check text-center ">
+            <div class="form-check text-center text-light ">
                 <input class="form-check-input-center" type="checkbox" value="remember-me" id="flexCheckDefault">
                 <label class="form-check-label" for="flexCheckDefault">
                     Remember me

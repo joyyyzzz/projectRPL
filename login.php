@@ -9,11 +9,9 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.118.2">
-    <title>Signin Template · Bootstrap v5.3</title>
+    <title>Waroeng Warem - Aplikasi Reservasi Meja Restoran</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
-
-
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
@@ -21,6 +19,13 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <style>
+        body {
+            background-image: url('https://media.istockphoto.com/id/1191879835/photo/empty-tabletop-in-the-coffe-shop.jpg?s=612x612&w=0&k=20&c=0ng1OHRLWiD0cVHdYZbmARj0fyR0HQ35BOFF7Ry8Qqs=');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
         .bd-placeholder-img {
             font-size: 1.125rem;
             text-anchor: middle;
@@ -128,7 +133,7 @@
 
     <main class="form-signin w-100 text-center m-auto">
         <form class="needs-validation" novalidate>
-            <h1 class="h3 mb-3 fw-normal">Please Sign In</h1>
+            <h1 class="h3 mb-3 text-light fw-normal">Please Sign In</h1>
 
             <div class="form-floating">
                 <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
@@ -144,7 +149,7 @@
                     Password Wrong.
                 </div>
             </div>
-            <div class="form-check text-start my-3">
+            <div class="form-check text-light text-start my-3">
                 <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
                 <label class="form-check-label" for="flexCheckDefault">
                     Remember me
