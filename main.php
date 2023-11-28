@@ -1,3 +1,14 @@
+<?php
+    //session_start();
+    if(empty($_SESSION["username_waroeng"])){
+        header("location:login");
+    }
+
+    include "proses/connect.php";
+    $query = mysqli_query($conn,"SELECT * FROM tb_user WHERE username = '$_SESSION[username_waroeng]'");
+    $hasil = mysqli_fetch_array($query);
+
+?>
 <!doctype html>
 <html lang="en">
 
@@ -21,21 +32,9 @@
             <!--end sidebar-->
 
             <!--CONTENT-->
-                <?php
-                if(isset($_GET['x']) && $_GET['x'] == 'home'){
-                    include "home.php";
-                }elseif(isset($_GET['x']) && $_GET['x'] == 'reservasi'){
-                    include "reservasi.php";
-                }elseif(isset($_GET['x']) && $_GET['x'] == 'meja'){
-                    include "meja.php";
-                }elseif(isset($_GET['x']) && $_GET['x'] == 'user'){
-                    include "user.php";
-                }elseif(isset($_GET['x']) && $_GET['x'] == 'login'){
-                    include "login.php";
-                }else{
-                    include "home.php";
-                }
-                ?>
+            <?php
+            include $page;
+            ?>
             <!--END CONTENT-->
         </div>
         <!--Footer-->

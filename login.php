@@ -1,3 +1,9 @@
+<?php
+    // session_start();
+    if(!empty($_SESSION["username_waroeng"])){
+        header("location:home");
+    }
+?>
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
 
@@ -132,18 +138,18 @@
 
 
     <main class="form-signin w-100 text-center m-auto">
-        <form class="needs-validation" novalidate>
+        <form class="needs-validation" novalidate action="proses/proses_login.php" method="POST">
             <h1 class="h3 mb-3 text-light fw-normal">Please Sign In</h1>
 
             <div class="form-floating">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                <input name="username" type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
                 <label for="floatingInput">Email address</label>
                 <div class="invalid-feedback">
                     Please Input a valid Email.
                 </div>
             </div>
             <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+                <input name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
                 <label for="floatingPassword">Password</label>
                 <div class="invalid-feedback">
                     Password Wrong.
@@ -155,7 +161,7 @@
                     Remember me
                 </label>
             </div>
-            <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+            <button class="btn btn-primary w-100 py-2" type="submit" name="submit_validate" value="abc" >Sign in</button>
             <p class="mt-5 mb-3 text-body-secondary">&copy; 2023</p>
         </form>
     </main>

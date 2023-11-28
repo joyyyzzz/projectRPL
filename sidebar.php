@@ -18,17 +18,27 @@
                                 aria-current="page" href="home"><i class="bi bi-house"></i> Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link ps-2 <?php echo (isset($_GET['x']) && $_GET['x'] == 'reservasi') ? 'active link-light' : 'link-dark'; ?>"" href="reservasi"><i class="bi bi-cart-plus"></i>
-                                Reservasi</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link ps-2 <?php echo (isset($_GET['x']) && $_GET['x'] == 'meja') ? 'active link-light' : 'link-dark'; ?>"" href="meja"><i class="bi bi-calendar3-event"></i>
+                            <a class="nav-link ps-2 <?php echo (isset($_GET['x']) && $_GET['x'] == 'meja') ? 'active link-light' : 'link-dark'; ?>"" href="
+                                meja"><i class="bi bi-calendar3-event"></i>
                                 Meja</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link ps-2 <?php echo (isset($_GET['x']) && $_GET['x'] == 'user') ? 'active link-light' : 'link-dark'; ?>"" href="user"><i class="bi bi-bag-fill"></i>
+                            <a class="nav-link ps-2 <?php echo (isset($_GET['x']) && $_GET['x'] == 'reservasi') ? 'active link-light' : 'link-dark'; ?>"" href="
+                                reservasi"><i class="bi bi-cart-plus"></i>
+                                Reservasi</a>
+                        </li>
+                        <?php if($hasil['level']==1){ ?>
+                        <li class="nav-item">
+                            <a class="nav-link ps-2 <?php echo (isset($_GET['x']) && $_GET['x'] == 'user') ? 'active link-light' : 'link-dark'; ?>"" href="
+                                user"><i class="bi bi-bag-fill"></i>
                                 User</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link ps-2 <?php echo (isset($_GET['x']) && $_GET['x'] == 'laporan') ? 'active link-light' : 'link-dark'; ?>"" href="
+                                laporan"><i class="bi bi-clipboard-data"></i>
+                                Laporan</a>
+                        </li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>
