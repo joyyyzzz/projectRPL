@@ -1,14 +1,119 @@
+<?php
+include "proses/connect.php";
+$query = mysqli_query($conn, "SELECT * FROM tb_user");
+while ($record = mysqli_fetch_array($query)) {
+    $result[] = $record;
+}
+?>
 <div class="col-lg-9 mt-2">
     <div class="card">
         <div class="card-header">
-            User
+            Halaman User
         </div>
         <div class="card-body">
-            <h5 class="card-title">Welcome to User</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate architecto dolorem
-                amet modi, omnis aspernatur quo praesentium fuga laborum a ea, impedit explicabo, voluptatem ratione
-                molestias nihil dignissimos. Consequatur, minima.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="row">
+                <div class="col d-flex justify-content-end">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalTambahUser"> <i
+                            class="bi bi-person-plus"></i></button>
+                </div>
+            </div>
+            <!-- Modal Tambah User-->
+            <div class="modal fade" id="ModalTambahUser" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-fullscreen-md-down">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Tambah User</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Understood</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END Tambah User -->
+
+            <!-- Modal View -->
+            <div class="modal fade" id="ModalView" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-fullscreen-md-down">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Data User</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Understood</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END Modal View -->
+
+            <?php
+            if (empty($result)) {
+                echo "Data user tidak ada";
+            } else {
+
+                ?>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">Nama</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Level</th>
+                                <th scope="col">No HP</th>
+                                <th scope="col">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            $no = 1;
+
+                            foreach ($result as $row) {
+                                ?>
+                                <tr>
+                                    <th scope="row"><?php echo $no++ ?></th>
+                                    <td>
+                                        <?php echo $row['nama'] ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $row['username'] ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $row['level'] ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $row['noHp'] ?>
+                                    </td>
+                                    <td class="d-flex">
+                                        <button class="btn btn-dark btn-info btn-sm me-1" data-bs-toggle="modal"
+                                            data-bs-target="#ModalView"><i class="bi bi-eye"></i></button>
+                                        <button class="btn btn-dark btn-warning btn-sm me-1"><i
+                                                class="bi bi-pencil-square"></i></button>
+                                        <button class="btn btn-dark btn-danger btn-sm"><i class="bi bi-trash3"></i></button>
+                                    </td>
+                                </tr>
+                                <?php
+                            }
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
+                <?php
+            }
+            ?>
         </div>
     </div>
 </div>
