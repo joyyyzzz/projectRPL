@@ -1,14 +1,28 @@
-<div class="col-lg-9 mt-2">
-    <div class="card">
-        <div class="card-header">
-            Reservasi
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Welcome to Reservasi</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate architecto dolorem
-                amet modi, omnis aspernatur quo praesentium fuga laborum a ea, impedit explicabo, voluptatem ratione
-                molestias nihil dignissimos. Consequatur, minima.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
+<div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+</div>
+
+<div class="form-group">
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" required><br>
+</div>
+
+<div class="form-group">
+    <label for="check_in_date">Check-in Date:</label>
+    <input type="date" id="check_in_date" name="check_in_date" required><br>
+</div>
+
+<div class="form-group">
+    <label for="check_out_date">Check-out Date:</label>
+    <input type="date" id="check_out_date" name="check_out_date" required><br>
+</div>
+
+<div class="form-group">
+    <label for="no_of_guests">Number of Guests:</label>
+    <input type="number" id="no_of_guests" name="no_of_guests" required><br>
+</div>
+
+<input type="submit" value="Reserve">
+</form>
 </div>
